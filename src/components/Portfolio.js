@@ -156,7 +156,7 @@ const Portfolio = () => {
             <div className='content-wrapper'>
                 <div className='content'>
                     <div>
-                        <h1 className='welcome'>Hello world !</h1>
+                        <h1 className='welcome welcome-text'>Hello world !</h1>
                     </div>
                 </div>
                 <div style={{ marginTop: '70px' }} className='hero-text'>
