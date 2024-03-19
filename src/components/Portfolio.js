@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Portfolio.css'; // Import CSS file for styling
 import projects from '@/utils/projects';
+import socialMediaIcons from '@/utils/icons';
 
 const Portfolio = () => {
     const [scrollDirection, setScrollDirection] = useState(null);
@@ -21,77 +22,11 @@ const Portfolio = () => {
             }
             lastScrollY = scrollY > 0 ? scrollY : 0;
         };
-        window.addEventListener('scroll', updateScrollDirection); // add event listener
+        window.addEventListener('scroll', updateScrollDirection);
         return () => {
-            window.removeEventListener('scroll', updateScrollDirection); // clean up
+            window.removeEventListener('scroll', updateScrollDirection);
         };
     }, [scrollDirection]);
-
-    const Skills = [
-        {
-            title: 'Frontend',
-            description:
-                'On the frontend, I specialize in creating visually appealing and user-friendly interfaces. My focus lies in creating intuitive designs and interactive elements that prioritize user experience and satisfaction ensuring seamless navigation and accessibility across various devices and browsers.',
-            tech: [
-                'Html',
-                'Css',
-                'JavaScript',
-                'React',
-                'Redux',
-                'Flux',
-                'NextJS',
-                'Jest',
-                'React Testing Library',
-                'Graphql',
-                'Scss',
-                'Bootstrap',
-                'Styled Components',
-                'Material UI',
-                'Saas',
-                'Sandbox',
-                'Storybook',
-                'Turbo',
-                'Wordpress',
-                'Core web vitals',
-            ],
-        },
-        {
-            title: 'Backend',
-            description:
-                'While my primary focus is on frontend development, I also possess skills in backend development. I&apos;m capable of building and maintaining server-side logic and databases.',
-            tech: [
-                'Express',
-                'Css',
-                'Node',
-                'Mongoose',
-                'Mongodb',
-                'Mocha',
-                'Rest api',
-                'Redis',
-                'Php',
-                'Jwt',
-            ],
-        },
-        {
-            title: 'Tools and others',
-            description:
-                'In addition to my development skills, I am proficient in utilizing various tools and technologies that streamline the development process enabling smooth transition from development to production environments, ensuring seamless deployment of web applications.',
-            tech: [
-                'Git',
-                'Github',
-                'Bitbucket',
-                'Jira',
-                'Scrum',
-                'Newrelic',
-                'Jira',
-                'Lighthouse',
-                'Browserstack',
-                'Heroku',
-                'Netlify',
-                'Docker',
-            ],
-        },
-    ];
 
     const [myProjects, showMyProjects] = useState(projects.slice(0, 3));
     const [loading, setLoading] = useState(false);
@@ -100,6 +35,17 @@ const Portfolio = () => {
     const projectRef = useRef(null);
     const contactRef = useRef(null);
     const topRef = useRef(null);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleOnChange = (e) => {
+        const { name, value } = e.target;
+        console.log(name, value);
+        if (name === 'name') setName(value);
+        if (name === 'email') setEmail(value);
+        if (name === 'message') setMessage(value);
+    };
 
     const handleShowMore = () => {
         setLoading(true);
@@ -108,6 +54,24 @@ const Portfolio = () => {
             showMyProjects(projects.slice(0, myProjects.length + 2));
         }, 600);
         if (myProjects.length === projects.length) return;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        fetch('/mail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     };
 
     useEffect(() => {
@@ -136,8 +100,6 @@ const Portfolio = () => {
         },
     ];
 
-    const socialMediaIcons = ['fa fa-linkedin', 'fa fa-github', 'fa fa-facebook', 'fa fa-instagram', 'fa fa-envelope'];
-
     return (
         <div ref={topRef} className='wrapper'>
             <div className={`header-container ${scrollDirection === 'up' ? 'scrolled' : ''}`}>
@@ -148,8 +110,13 @@ const Portfolio = () => {
                 </div>
                 <div className='menu'>
                     {navItems.map((item, idx) => (
-                        <span className='menu-item' key={idx} onClick={() => item.ref.current.scrollIntoView({ behavior: 'smooth' })}>{item.name}</span>
-
+                        <span
+                            className='menu-item'
+                            key={idx}
+                            onClick={() => item.ref.current.scrollIntoView({ behavior: 'smooth' })}
+                        >
+                            {item.name}
+                        </span>
                     ))}
                 </div>
             </div>
@@ -416,13 +383,27 @@ const Portfolio = () => {
                                                 person
                                             </span>{' '}
                                         </label>
-                                        <input spellCheck='false' type='text' placeholder='Name' />
+                                        <input
+                                            spellCheck='false'
+                                            type='text'
+                                            placeholder='Name'
+                                            value={name}
+                                            onChange={handleOnChange}
+                                            name='name'
+                                        />
                                     </div>
                                     <div className='input-wrapper inline-group'>
                                         <label className='email-label'>
                                             <span className='material-symbols-outlined'>mail</span>{' '}
                                         </label>
-                                        <input spellCheck='false' type='text' placeholder='Email' />
+                                        <input
+                                            spellCheck='false'
+                                            type='text'
+                                            placeholder='Email'
+                                            name='email'
+                                            value={email}
+                                            onChange={handleOnChange}
+                                        />
                                     </div>
                                 </div>
                                 <div className='input-wrapper'>
@@ -433,7 +414,10 @@ const Portfolio = () => {
                                         spellCheck='false'
                                         className='email'
                                         type='text'
+                                        name='message'
                                         placeholder='Message'
+                                        value={message}
+                                        onChange={handleOnChange}
                                     />
                                 </div>
                             </form>
@@ -441,7 +425,7 @@ const Portfolio = () => {
                     </div>
                 </div>
                 <div className={`button-wrapper submit-button`}>
-                    <div className='show-more'>Send</div>
+                    <div className='show-more' onClick={handleSubmit}>Send</div>
                 </div>
                 <div className='footer-cc'>
                     <p>© Akash Sapkota, {new Date().getFullYear()} Made with Next.js</p>
