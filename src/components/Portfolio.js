@@ -28,7 +28,7 @@ const Portfolio = () => {
         };
     }, [scrollDirection]);
 
-    const [myProjects, showMyProjects] = useState(projects.slice(0, 3));
+    const [myProjects, showMyProjects] = useState(projects.slice(0, 4));
     const [loading, setLoading] = useState(false);
     const sectionRef = useRef(null);
     const skillsRef = useRef(null);
@@ -76,7 +76,7 @@ const Portfolio = () => {
 
     useEffect(() => {
         const projectWrapper = document.querySelector('.project-wrapper');
-        if (myProjects.length > 3 && myProjects.length <= projects.length) {
+        if (myProjects.length > 4 && myProjects.length <= projects.length) {
             projectWrapper.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
     }, [myProjects]);
@@ -127,26 +127,21 @@ const Portfolio = () => {
                     </div>
                 </div>
                 <div style={{ marginTop: '70px' }} className='hero-text'>
-                    <div className='intro-wrapper'>
+                    <div className='intro-wrapper left-gradient'>
                         <p className='intro'>
-                            <span className='intro-title'>
-                                Hello there! I'm <span className=''>Akash Sapkota</span>, a
-                                Barcelona-based code wizard specializing in{' '}
-                                <span className=''>full-stack development</span>. How do I weave
-                                this magic ? Let's uncover the secrets together!
-                            </span>
+                            Hello there! I'm <span className='accent-m-b'>Akash Sapkota</span>, a
+                            Barcelona-based code wizard specializing in{' '}
+                            <span className=''>full-stack development</span>. How do I weave this
+                            magic ? Let's uncover the secrets together!
                         </p>
                     </div>
-                    <div className='sub-intro-wrapper'>
+                    <div className='sub-intro-wrapper left-gradient'>
                         <p className='sub-intro'>
-                            <span>
-                                {' '}
-                                The magic lies in building websites and web applications, creating
-                                dynamic and responsive web solutions, and delivering{' '}
-                                <span className=''>high-quality </span>
-                                code and user-friendly{' '}
-                                <span className='accent-element'>experiences.</span>
-                            </span>
+                            The magic lies in building websites and web applications, creating
+                            dynamic and responsive <span className='accent-m-b'>web solutions</span>, and delivering{' '}
+                            high-quality
+                            code and user-friendly{' '}
+                            <span className='accent-element'>experiences.</span>
                         </p>
                     </div>
                 </div>
@@ -202,9 +197,15 @@ const Portfolio = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='image-wrapper'>
+                    <div className='image-wrapper left-gradient'>
                         <div className='container'>
-                            <img src='/img.png' alt='Image' className='image' />
+                            <img
+                                width={'100%'}
+                                height={'100%'}
+                                src='/img.png'
+                                alt='Image'
+                                className='image'
+                            />
                         </div>
                     </div>
                 </div>
@@ -311,13 +312,17 @@ const Portfolio = () => {
                             key={idx}
                         >
                             <div className='project-card-header'>
-                                <h3>
+                                <h2>
                                     <span className='number'>{`0.${idx + 1} `}</span>
                                     {project.title}
-                                </h3>
+                                </h2>
                                 <span className='project-card-icons'>
-                                    <i className='fa fa-github'></i>
-                                    <i className='fa fa-external-link' aria-hidden='true'></i>
+                                    <a target='_blank' href={project.gitHub}>
+                                        <i className='fa fa-github'></i>
+                                    </a>
+                                    <a target='_blank' href={project?.demo}>
+                                        <i className='fa fa-external-link' aria-hidden='true'></i>
+                                    </a>
                                 </span>
                             </div>
                             <div className='project-card-body'>
@@ -425,7 +430,9 @@ const Portfolio = () => {
                     </div>
                 </div>
                 <div className={`button-wrapper submit-button`}>
-                    <div className='show-more' onClick={handleSubmit}>Send</div>
+                    <div className='show-more' onClick={handleSubmit}>
+                        Send
+                    </div>
                 </div>
                 <div className='footer-cc'>
                     <p>© Akash Sapkota, {new Date().getFullYear()} Made with Next.js</p>
