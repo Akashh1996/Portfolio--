@@ -32,10 +32,6 @@ export default function RootLayout({ children }) {
                 <meta property='author' content='Akash Sapkota' />
                 <meta http-equiv="last-modified" content="2024-03-20@10:30:00 GMT"></meta>
                 <meta name="application-name" content="akashsapkota.netlify.app"></meta>
-                <link
-                    rel='stylesheet'
-                    href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
-                ></link>
                 <meta name="google-site-verification" content="y1ewVDE3H4lJCe8Fe4OCKMWA9nDk10Uu8qsFIY5yvQk" />
             </head>
             <body className={inter.className}>{children}</body>
