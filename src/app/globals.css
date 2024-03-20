@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Kaushan+Script&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rouge+Script&family=Sail&family=Style+Script&family=Sail&family=Sofia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sofia&display=swap');
+
 
 :root {
-  --main-color: #E2DFD3; /* Define the color variable */
+  --main-color: #E2DFD3;
   --accent-color:  #6A5ACD;
 }
 
 body {
   font-family: "Montserrat", sans-serif!important;
+  font-display: swap;
     overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
@@ -23,10 +24,6 @@ body {
 
   }
    
-  /* body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px black;
-  }
-    */
   body::-webkit-scrollbar-thumb {
     background: var(--main-color);
     outline: 1px solid rgb(209, 209, 209, .9);

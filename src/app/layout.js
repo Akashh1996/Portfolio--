@@ -4,10 +4,10 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-    title: 'Akash Sapkota | Full stack Developer',
-    description: 'Frontend developer',
-    keywords: 'portfolio, javascript, developer, akash portfolio',
-    url: 'https://akashportfoliohub.netlify.com',
+    title: 'Akash Sapkota - Full-stack Developer, React Developer, Akash Portfolio, Frontend Developer',
+    description: 'This is my portfolio where you can see my projects and skills, about me and also you can contact me. Checkout my github profile to see more.',
+    keywords: 'web developer portfolio, frontend developer, portfolio, react developer, react, nextjs, javascript, node',
+    url: 'https://akashsapkota.netlify.com',
     type: 'website',
     robots: 'index, follow',
     author: 'Akash Sapkota',
@@ -19,30 +19,22 @@ export default function RootLayout({ children }) {
     return (
         <html lang='en'>
             <head>
-                <meta property='og:title' content='Akash Sapkota | Full stack Developer' />
-                <meta property='og:description' content='Frontend developer' />
+                <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
+                <meta property='og:title' content='Akash Sapkota - Full stack Developer, React Developer, Akash Portfolio, Frontend Developer' />
+                <meta property='og:description' content='This is my portfolio where you can see my projects and skills, about me and also you can contact me. Checkout my github profile to see more.' />
+                <meta name="generator" content="Next 14.0.0"></meta>
                 <meta
                     name='keyword'
-                    content='akash sapkota portfolio, javascript, developer, akash portfolio, top portfolio 2024, best portfolio website'
+                    content='web developer portfolio, frontend developer, portfolio, react developer, react, nextjs, javascript, node'
                 ></meta>
-                <meta property='og:url' content='https://akashportfoliohub.netlify.com' />
+                <meta property='og:url' content='https://akashsapkota.netlify.com' />
                 <meta property='og:type' content='website' />
-                <link
-                    rel='stylesheet'
-                    href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0'
-                />
+                <meta property='author' content='Akash Sapkota' />
+                <meta http-equiv="last-modified" content="2024-03-20@10:30:00 GMT"></meta>
+                <meta name="application-name" content="akashsapkota.netlify.app"></meta>
                 <link
                     rel='stylesheet'
                     href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
-                ></link>
-                <link
-                    rel='stylesheet'
-                    type='text/css'
-                    href='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
-                />
-                <link
-                    rel='stylesheet'
-                    href='https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap'
                 ></link>
             </head>
             <body className={inter.className}>{children}</body>
