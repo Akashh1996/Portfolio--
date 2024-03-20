@@ -839,7 +839,6 @@ a.my-mail {
 .image-wrapper.left-gradient:after {
   background: none;
 }
-
 .image-wrapper.left-gradient {
   padding-left: 0;
 }
@@ -860,7 +859,6 @@ a.my-mail {
     background-repeat: no-repeat;
     border-top-left-radius: 22px;
   }
-
   .sub-intro {
     border-width: 5px;
     border-style: solid;
@@ -890,7 +888,6 @@ a.my-mail {
   .accent-m-b {
     color: unset;
   }
-
   .container:after {
     position: absolute;
     bottom: 0;
@@ -914,4 +911,8 @@ a.my-mail {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+}
+
+a.accent {
+  text-decoration: underline;
 }
