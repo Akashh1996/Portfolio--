@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
     title: 'Akash Sapkota - Full-stack Developer, React Developer, Akash Portfolio, Frontend Developer',
     description: 'This is my portfolio where you can see my projects and skills, about me and also you can contact me. Checkout my github profile to see more.',
-    keywords: 'web developer portfolio, frontend developer, portfolio, react developer, react, nextjs, javascript, node',
+    keywords: 'web developer portfolio, frontend developer, portfolio, akash, akash sapkota, akash portfolio, akash sapkota portfolio, react developer, react, nextjs, javascript, node',
     url: 'https://akashsapkota.netlify.com',
     type: 'website',
     robots: 'index, follow',
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
                 <meta name="generator" content="Next 14.0.0"></meta>
                 <meta
                     name='keyword'
-                    content='web developer portfolio, frontend developer, portfolio, react developer, react, nextjs, javascript, node'
+                    content='web developer portfolio, frontend developer, portfolio, akash, akash sapkota, akash portfolio, akash sapkota portfolio, react developer, react, nextjs, javascript, node'
                 ></meta>
                 <meta property='og:url' content='https://akashsapkota.netlify.com' />
                 <meta property='og:type' content='website' />
