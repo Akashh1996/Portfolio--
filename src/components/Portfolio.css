@@ -16,6 +16,8 @@ h1 {
 
 .logo-wrapper {
   display: flex;
+  position: relative;
+  right: 1px;
 }
 
 p {
@@ -91,6 +93,7 @@ p {
   margin-top: 70px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   color: var(--main-color);
   opacity: .5;
   gap: 20px;
@@ -314,30 +317,17 @@ div.left-gradient {
   z-index: -1;
 }
 
-
-.logo-wrapper {
-  width: 59px;
-  font-family: "Sofia";
-  font-display: swap;
-}
-
 .logo-text-a {
   border-style: solid;
   border-color: transparent;
   background: linear-gradient(to right, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%), linear-gradient(to bottom, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%);
-  background-size: 92% 3px, 3px 75%;
+  background-size: 88% 3px, 3px 75%;
   background-position: left top, left top;
   background-repeat: no-repeat;
   border-top-left-radius: 14px;
-  padding-left: 17px;
-  padding-top: 11px;
+  padding-left: 6px;
+  padding-top: 5px;
   font-size: 32px;
-}
-
-.logo-text-a span {
-  position: relative;
-  top: -9px;
-  left: -5px;
 }
 
 .container {

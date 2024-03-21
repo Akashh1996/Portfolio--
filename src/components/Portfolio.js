@@ -130,7 +130,14 @@ const Portfolio = () => {
             <div className={`header-container ${scrollDirection === 'up' ? 'scrolled' : ''}`}>
                 <div className='logo-wrapper'>
                     <a area-label='logo' href='https://akashsapkota.netlify.com' className='logo-text-a'>
-                        <span>A</span>
+                        <Image
+                            src='/logo.png'
+                            alt='logo'
+                            width={39}
+                            height={49}
+                            quality={100}
+                            className='logo'
+                        />
                     </a>
                 </div>
                 <div className='menu'>
@@ -183,8 +190,8 @@ const Portfolio = () => {
                                 className='image'
                                 src={icon}
                                 alt={icon.replace(/\.svg$/, '')}
-                                width={30}
-                                height={30}
+                                width={icon === 'linkedin.svg' ? 42 : 30}
+                                height={icon === 'linkedin.svg' ? 42 : 30}
                                 quality={100}
                             />
                         </a>
