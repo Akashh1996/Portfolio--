@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --main-color: #E2DFD3;
@@ -7,8 +6,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif!important;
-  font-display: swap;
+    font-family: "Montserrat", sans-serif!important;
     overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
