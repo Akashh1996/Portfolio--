@@ -135,7 +135,7 @@ const Portfolio = () => {
                         <h1 className='welcome welcome-text'>Hello world !</h1>
                     </div>
                 </div>
-                <div style={{ marginTop: '70px' }} className='hero-text'>
+                <div className='hero-text'>
                     <div className='intro-wrapper left-gradient'>
                         <p className='intro'>
                             Hello there! I'm <span className='accent-m-b'>Akash Sapkota</span>, a

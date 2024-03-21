@@ -449,7 +449,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.project-card-footer span {
+.project-card-footer span, .skill-frontend span {
   background-color: rgb(148, 163, 184, .1);
   padding: 5px 10px;
   font-size: .8rem;

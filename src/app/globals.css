@@ -30,11 +30,9 @@ body {
   .main {
     transition: box-shadow 0.3s ease;
   }
-
   p {
     margin: 0;
     color: rgb(209, 209, 209, .85);
-
   }
   a {
     color: unset;

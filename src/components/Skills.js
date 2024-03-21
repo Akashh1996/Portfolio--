@@ -36,7 +36,7 @@ const Skills = () => {
                         <span>Styled components</span>
                         <span>Material UI</span>
                         <span className='accent'>Jest</span>
-                        <span>Saas</span>
+                        <span>Sass</span>
                         <span>Sandbox</span>
                         <span>Storybook</span>
                         <span className='accent'>NextJS</span>
