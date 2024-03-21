@@ -26,7 +26,7 @@ const About = () => {
                             Currently, I’m working at{' '}
                             <a
                                 className='accent'
-                                href='https://deporvillage.com/'
+                                href='https://www.deporvillage.com/'
                                 target='_blank'
                                 aria-label='Deporvillage'
                             >
