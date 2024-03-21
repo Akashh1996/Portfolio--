@@ -4,7 +4,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-    title: 'Akash Sapkota - Full-stack Developer, React Developer, Akash Portfolio, Frontend Developer',
+    title: 'Akash Sapkota | Portfolio',
     description: 'This is my portfolio where you can see my projects and skills, about me and also you can contact me. Checkout my github profile to see more.',
     keywords: 'web developer portfolio, frontend developer, portfolio, akash, akash sapkota, akash portfolio, akash sapkota portfolio, react developer, react, nextjs, javascript, node',
     url: 'https://akashsapkota.netlify.com',
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <html lang='en'>
             <head>
                 <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
-                <meta property='og:title' content='Akash Sapkota - Full stack Developer, React Developer, Akash Portfolio, Frontend Developer' />
+                <meta property='og:title' content='Akash Sapkota | Portfolio' />
                 <meta property='og:description' content='This is my portfolio where you can see my projects and skills, about me and also you can contact me. Checkout my github profile to see more.' />
                 <meta name="generator" content="Next 14.0.0"></meta>
                 <meta
