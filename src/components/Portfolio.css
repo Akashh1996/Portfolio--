@@ -15,7 +15,7 @@ p {
 
 
 .content {
-  margin-top: 80px;
+  margin-top: 45px;
 }
 
 .wrapper {
@@ -53,8 +53,8 @@ section {
 .header-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0px 20px;
+  align-items: flex-start;
+    padding: 0px 20px;
   z-index: 99;
   background: #1d1d20;
   transition: position 0.3s ease-in-out;
@@ -179,11 +179,6 @@ ul, li {
   border-radius: 30px;
 }
 
-.menu-hamburger {
-  position: relative;
-    top: -5px;
-    display: block;
-}
 .menu-gradient.short {
   width: 25px;
   position: relative;
@@ -861,6 +856,9 @@ a.my-mail {
   }
   .image-wrapper.left-gradient {
     padding-left: 0;
+  }
+  .header-container {
+    align-items: center;
   }
 }
 
