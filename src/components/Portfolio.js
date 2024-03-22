@@ -117,6 +117,11 @@ const Portfolio = () => {
                         />
                     </a>
                 </div>
+                <div className='menu-hamburger'>
+                    <div className='menu-gradient'></div>
+                    <div className='menu-gradient short'></div>
+                    <div className='menu-gradient'></div>
+                </div>
                 <nav className='menu'>
                     <ul>
                         {navItems.map((item, idx) => (
@@ -290,6 +295,24 @@ const Portfolio = () => {
                 </p>
             </footer>
             </section>
+
+            <div>
+            <nav className='menu'>
+                    <ul>
+                        {navItems.map((item, idx) => (
+                            <li
+                                className='menu-item'
+                                key={idx}
+                                onClick={() =>
+                                    item.ref.current.scrollIntoView({ behavior: 'smooth' })
+                                }
+                            >
+                                {item.name}
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </div>
         </div>
     );
 };
