@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "Montserrat", sans-serif!important;
+    font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
@@ -25,16 +25,4 @@ body {
     background: var(--main-color);
     outline: 1px solid rgb(209, 209, 209, .9);
     border-radius: 10px;
-  }
-
-  .main {
-    transition: box-shadow 0.3s ease;
-  }
-  p {
-    margin: 0;
-    color: rgb(209, 209, 209, .85);
-  }
-  a {
-    color: unset;
-    text-decoration: none;
   }

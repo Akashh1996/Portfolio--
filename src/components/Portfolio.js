@@ -100,7 +100,7 @@ const Portfolio = () => {
 
     return (
         <div ref={topRef} className='wrapper'>
-            <div className={`header-container ${scrollDirection === 'up' ? 'scrolled' : ''}`}>
+            <header className={`header-container ${scrollDirection === 'up' ? 'scrolled' : ''}`}>
                 <div className='logo-wrapper'>
                     <a
                         area-label='logo'
@@ -117,23 +117,25 @@ const Portfolio = () => {
                         />
                     </a>
                 </div>
-                <div className='menu'>
-                    {navItems.map((item, idx) => (
-                        <span
-                            className='menu-item'
-                            key={idx}
-                            onClick={() => item.ref.current.scrollIntoView({ behavior: 'smooth' })}
-                        >
-                            {item.name}
-                        </span>
-                    ))}
-                </div>
-            </div>
-            <div className='content-wrapper'>
+                <nav className='menu'>
+                    <ul>
+                        {navItems.map((item, idx) => (
+                            <li
+                                className='menu-item'
+                                key={idx}
+                                onClick={() =>
+                                    item.ref.current.scrollIntoView({ behavior: 'smooth' })
+                                }
+                            >
+                                {item.name}
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </header>
+            <section className='hero-section'>
                 <div className='content'>
-                    <div>
                         <h1 className='welcome welcome-text'>Hello world !</h1>
-                    </div>
                 </div>
                 <div className='hero-text'>
                     <div className='intro-wrapper left-gradient'>
@@ -174,17 +176,17 @@ const Portfolio = () => {
                         </a>
                     ))}
                 </div>
-            </div>
+            </section>
 
-            <div ref={sectionRef} className='content-wrapper section-wrapper'>
+            <section ref={sectionRef}>
                 <About />
-            </div>
+            </section>
 
-            <div ref={skillsRef} className='content-wrapper section-wrapper'>
+            <section ref={skillsRef}>
                 <Skills />
-            </div>
+            </section>
 
-            <div ref={projectRef} className='content-wrapper section-wrapper project-wrapper'>
+            <section ref={projectRef} className='project-wrapper'>
                 <div className='title-wrapper'>
                     <h1 className='welcome title'>Projects</h1>
                 </div>
@@ -246,11 +248,13 @@ const Portfolio = () => {
                                 <p>{project.description}</p>
                             </div>
                             <div className='project-card-footer'>
+                                <ul className='tech-stack'>
                                 {project.tech.map((tech, idx) => (
-                                    <span className={tech.isAccent && 'accent'} key={idx}>
+                                    <li className={tech.isAccent === true ? 'accent' : ''} key={idx}>
                                         {tech.name}
-                                    </span>
+                                    </li>
                                 ))}
+                                </ul>
                             </div>
                         </div>
                     ))}
@@ -272,20 +276,20 @@ const Portfolio = () => {
                         <span>{projects.length - myProjects.length}</span> more...
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div ref={contactRef} className='content-wrapper section-wrapper'>
+            <section ref={contactRef}>
                 <Contact />
-                <div className='footer-cc'>
-                    <p>
-                        ©{' '}
-                        <a area-label='Akash Sapkota' href='https://akashsapkota.netlify.app'>
-                            Akash Sapkota
-                        </a>
-                        , {new Date().getFullYear()} Made with Next.js
-                    </p>
-                </div>
-            </div>
+                <footer className='footer-cc'>
+                <p>
+                    ©{' '}
+                    <a area-label='Akash Sapkota' href='https://akashsapkota.netlify.app'>
+                        Akash Sapkota
+                    </a>
+                    , {new Date().getFullYear()} Made with Next.js
+                </p>
+            </footer>
+            </section>
         </div>
     );
 };

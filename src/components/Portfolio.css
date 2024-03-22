@@ -4,14 +4,24 @@ h1 {
   font-size: 2rem;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+
 .content {
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 .wrapper {
   margin: 0px auto;
   max-width: 850px;
 
+}
+
+.hero-text p {
+  margin: 0;
 }
 
 .logo-wrapper {
@@ -24,10 +34,15 @@ p {
   line-height: 1.5;
 }
 
-.content-wrapper {
+.hero-section {
   height: 90vh;
   padding: 20px;
-  margin-bottom: 20px;
+}
+
+section {
+  height: auto;
+  margin: 20px 0;
+  padding: 70px 20px;
   box-shadow: 0 4px 2px -2px rgb(148, 163, 184, .1);
 }
 
@@ -74,7 +89,7 @@ p {
   flex-direction: column;
 }
 
-.menu span {
+.menu ul li {
   margin-right: 40px;
   position: relative;
   cursor: pointer;
@@ -85,7 +100,7 @@ p {
   transition: width 0.3s ease;
 }
 
-.menu span:last-child {
+.menu ul li:last-child {
   margin-right: 0;
 }
 
@@ -114,11 +129,19 @@ p {
 .hero-text {
   margin: auto;
   margin-top: 70px;
+  font-size: 16.5px;
 }
 
 .hero-text p {
   padding: 0px;
   width: 100%;
+  color: rgb(209, 209, 209);
+
+}
+
+.menu, h2, h3 {
+  color: rgb(209, 209, 209);
+
 }
 
 .intro,
@@ -134,6 +157,16 @@ p {
 
 .accent-m-b {
   color: rgb(66, 166, 102);
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul {
+  display: block;
 }
 
 /* 
@@ -163,7 +196,7 @@ p {
   padding-bottom: 2px;
 }
 
-.menu span:after {
+.menu ul li:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -291,13 +324,7 @@ div.left-gradient {
 
 }
 
-.section-wrapper {
-  height: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+
 
 .title-wrapper {
   margin-bottom: 40px;
@@ -363,7 +390,7 @@ div.left-gradient {
 
 h2 {
   font-size: 23px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .title {
@@ -378,7 +405,7 @@ h2 {
   margin-left: auto;
 }
 
-.skill-frontend {
+.skill-frontend, .tech-stack {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -407,7 +434,7 @@ h2 {
 .skill-frontend-description,
 .skill-backend-description,
 .skill-other-description {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .skill-description i {
@@ -446,10 +473,10 @@ h2 {
 }
 
 .project-card-body {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.project-card-footer span, .skill-frontend span {
+.project-card-footer li, .skill-frontend li {
   background-color: rgb(148, 163, 184, .1);
   padding: 5px 10px;
   font-size: .8rem;
@@ -531,6 +558,10 @@ h3 {
   color: rgb(66, 166, 102);
 }
 
+li.accent {
+  color: rgb(66, 166, 102);
+}
+
 .hidden {
   display: none;
 }
@@ -592,8 +623,11 @@ textarea {
 .title,
 h2,
 h3 {
-  color: #cacaca;
   margin-top: 0;
+}
+
+.title {
+  font-weight: 400;
 }
 
 .loading {
@@ -642,11 +676,6 @@ h3 {
   background-size: 15% 11px, 11px 15%;
   text-align: left;
 
-}
-
-.section-wrapper {
-  padding-top: 70px;
-  padding-bottom: 70px;
 }
 
 .contact-description {
@@ -723,9 +752,12 @@ a.my-mail {
   padding-left: 0;
 }
 
+.menu {
+  position: unset;
+}
+
 @media screen and (min-width: 480px) {
   .hero-text p {
-    color: rgb(209, 209, 209, .9);
     padding: 40px;
     width: 45%;
   }
@@ -755,8 +787,14 @@ a.my-mail {
     margin-top: 0px;
   }
 
+  .intro-wrapper, .sub-intro-wrapper {
+    padding-left: 0!important;
+  }
+
   .menu {
     flex-direction: row;
+    position: relative;
+    top: -8px;
   }
 
   .intro-wrapper.left-gradient::after,
@@ -783,6 +821,10 @@ a.my-mail {
 
   .welcome {
     font-size: 36px;
+  }
+
+  .menu ul {
+    display: flex;
   }
 }
 

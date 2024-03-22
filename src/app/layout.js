@@ -1,12 +1,9 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
     title: 'Akash Sapkota | Portfolio',
-    description: 'This is my portfolio where you can see my projects and skills, about me and also you can contact me. Checkout my github profile to see more.',
-    keywords: 'web developer portfolio, frontend developer, portfolio, akash, akash sapkota, akash portfolio, akash sapkota portfolio, react developer, react, nextjs, javascript, node',
+    description: "Welcome to Akash Sapkota's portfolio. Here you will find my latest projects and skills with their detailed descriptions, demos and source code. Also you will get to know about me and how to get in touch for any query. You can also check out my GitHub or LinkedIn profile for additional information.",
+    keywords: 'portfolioakash, akash,akash sapkota, akash portfolio, portfolio, akashportfolio, akashsapkotaportfolio, akash sapkota portfolio, react, nextjs, javascript, node, frontend developer',
     url: 'https://akashsapkota.netlify.com',
     type: 'website',
     robots: 'index, follow',
@@ -21,20 +18,22 @@ export default function RootLayout({ children }) {
             <head>
                 <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
                 <meta property='og:title' content='Akash Sapkota | Portfolio' />
-                <meta property='og:description' content='This is my portfolio where you can see my projects and skills, about me and also you can contact me. Checkout my github profile to see more.' />
+                <meta property="og:image" content="/akash.png"></meta>
+                <meta property='og:description' content="Welcome to Akash Sapkota's portfolio. Here you will find my latest projects and skills with their detailed descriptions, demos and source code. Also you will get to know about me and how to get in touch for any query. You can also check out my GitHub or LinkedIn profile for additional information." />
                 <meta name="generator" content="Next 14.0.0"></meta>
                 <meta
                     name='keyword'
-                    content='web developer portfolio, frontend developer, portfolio, akash, akash sapkota, akash portfolio, akash sapkota portfolio, react developer, react, nextjs, javascript, node'
+                    content='portfolioakash,akash,akash sapkota,akash portfolio,portfolio,akashportfolio, akashsapkotaportfolio , akash sapkota portfolio, react, nextjs, javascript, node, frontend developer'
                 ></meta>
-                <meta property='og:url' content='https://akashsapkota.netlify.com' />
+                <meta property="og:site_name" content="akashsapkota.netlify.app"></meta>
+                <meta property='og:url' content='https://akashsapkota.netlify.app' />
                 <meta property='og:type' content='website' />
                 <meta property='author' content='Akash Sapkota' />
-                <meta http-equiv="last-modified" content="2024-03-20@10:30:00 GMT"></meta>
+                <meta httpEquiv="last-modified" content="2024-03-22@10:30:00 GMT"></meta>
                 <meta name="application-name" content="akashsapkota.netlify.app"></meta>
                 <meta name="google-site-verification" content="y1ewVDE3H4lJCe8Fe4OCKMWA9nDk10Uu8qsFIY5yvQk" />
             </head>
-            <body className={inter.className}>{children}</body>
+            <body>{children}</body>
         </html>
     );
 }

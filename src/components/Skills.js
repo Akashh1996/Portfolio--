@@ -3,7 +3,6 @@
 import techIcons from '@/utils/techIcons';
 import Image from 'next/image';
 
-
 const Skills = () => {
     return (
         <>
@@ -12,9 +11,7 @@ const Skills = () => {
             </div>
             <div>
                 <div className='skill-section left-gradient'>
-                    <div>
-                        <h2> Frontend</h2>
-                    </div>
+                    <h2> Frontend</h2>
                     <p className='skill-frontend-description'>
                         On the frontend, I specialize in creating visually appealing and
                         user-friendly interfaces. My focus lies in creating intuitive designs and
@@ -22,28 +19,28 @@ const Skills = () => {
                         ensuring seamless navigation and accessibility across various devices and
                         browsers.
                     </p>
-                    <div className='skill-frontend'>
-                        <span>Html</span>
-                        <span>Css</span>
-                        <span className='accent'>React</span>
-                        <span>JavaScript</span>
-                        <span>Flux</span>
-                        <span className='accent'>Redux</span>
-                        <span>React Testing Library</span>
-                        <span>Graphql</span>
-                        <span>Scss</span>
-                        <span>Bootstrap</span>
-                        <span>Styled components</span>
-                        <span>Material UI</span>
-                        <span className='accent'>Jest</span>
-                        <span>Sass</span>
-                        <span>Sandbox</span>
-                        <span>Storybook</span>
-                        <span className='accent'>NextJS</span>
-                        <span>Turbo</span>
-                        <span>Wordpress</span>
-                        <span>Core web vitals</span>
-                    </div>
+                    <ul className='skill-frontend'>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li className='accent'>React</li>
+                        <li>JavaScript</li>
+                        <li>Flux</li>
+                        <li className='accent'>Redux</li>
+                        <li>React Testing Library</li>
+                        <li>Graphql</li>
+                        <li>Scss</li>
+                        <li>Bootstrap</li>
+                        <li>Styled components</li>
+                        <li>Material UI</li>
+                        <li className='accent'>Jest</li>
+                        <li>Sass</li>
+                        <li>Sandbox</li>
+                        <li>Storybook</li>
+                        <li className='accent'>NextJS</li>
+                        <li>Turbo</li>
+                        <li>Wordpress</li>
+                        <li>Core web vitals</li>
+                    </ul>
                 </div>
                 <div className='skill-section left-gradient'>
                     <h2>Backend</h2>
@@ -52,17 +49,17 @@ const Skills = () => {
                         backend development. I'm capable of building and maintaining server-side
                         logic and databases.
                     </p>
-                    <div className='skill-frontend'>
-                        <span className='accent'>Express</span>
-                        <span>Node</span>
-                        <span>Mongoose</span>
-                        <span className='accent'>Mongodb</span>
-                        <span>Mocha</span>
-                        <span>Rest api</span>
-                        <span>Redis</span>
-                        <span>Php</span>
-                        <span>Jwt</span>
-                    </div>
+                    <ul className='skill-frontend'>
+                        <li className='accent'>Express</li>
+                        <li>Node</li>
+                        <li>Mongoose</li>
+                        <li className='accent'>Mongodb</li>
+                        <li>Mocha</li>
+                        <li>Rest api</li>
+                        <li>Redis</li>
+                        <li>Php</li>
+                        <li>Jwt</li>
+                    </ul>
                 </div>
                 <div className='skill-section left-gradient'>
                     <h2>Tools and other</h2>
@@ -72,19 +69,19 @@ const Skills = () => {
                         smooth transition from development to production environments, ensuring
                         seamless deployment of web applications.
                     </p>
-                    <div className='skill-frontend'>
-                        <span>Github</span>
-                        <span className='accent'>Git</span>
-                        <span>Bitbucket</span>
-                        <span>Newrelic</span>
-                        <span className='accent'>Scrum</span>
-                        <span>Lighthouse</span>
-                        <span>Browserstack</span>
-                        <span className='accent'>Jira</span>
-                        <span>Heroku</span>
-                        <span>Netlify</span>
-                        <span>Docker</span>
-                    </div>
+                    <ul className='skill-frontend'>
+                        <li>Github</li>
+                        <li className='accent'>Git</li>
+                        <li>Bitbucket</li>
+                        <li>Newrelic</li>
+                        <li className='accent'>Scrum</li>
+                        <li>Lighthouse</li>
+                        <li>Browserstack</li>
+                        <li className='accent'>Jira</li>
+                        <li>Heroku</li>
+                        <li>Netlify</li>
+                        <li>Docker</li>
+                    </ul>
                 </div>
             </div>
             <div className='tech-icons'>
