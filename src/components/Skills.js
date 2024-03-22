@@ -20,25 +20,15 @@ const Skills = () => {
                         browsers.
                     </p>
                     <ul className='skill-frontend'>
-                        <li>Html</li>
-                        <li>Css</li>
-                        <li className='accent'>React</li>
                         <li>JavaScript</li>
+                        <li className='accent'>React</li>
                         <li>Flux</li>
                         <li className='accent'>Redux</li>
                         <li>React Testing Library</li>
-                        <li>Graphql</li>
-                        <li>Scss</li>
-                        <li>Bootstrap</li>
-                        <li>Styled components</li>
-                        <li>Material UI</li>
                         <li className='accent'>Jest</li>
-                        <li>Sass</li>
-                        <li>Sandbox</li>
-                        <li>Storybook</li>
-                        <li className='accent'>NextJS</li>
+                        <li>Graphql</li>
                         <li>Turbo</li>
-                        <li>Wordpress</li>
+                        <li className='accent'>NextJS</li>
                         <li>Core web vitals</li>
                     </ul>
                 </div>

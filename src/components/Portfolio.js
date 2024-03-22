@@ -137,8 +137,8 @@ const Portfolio = () => {
                 <div className='content'>
                         <h1 className='welcome welcome-text'>Hello world !</h1>
                 </div>
-                <div className='hero-text'>
-                    <div className='intro-wrapper left-gradient'>
+                <div className='hero-text left-gradient'>
+                    <div className='intro-wrapper'>
                         <p className='intro'>
                             Hello there! I'm <span className='accent-m-b'>Akash Sapkota</span>, a
                             Barcelona-based code wizard specializing in{' '}
@@ -146,7 +146,7 @@ const Portfolio = () => {
                             magic ? Let's uncover the secrets together!
                         </p>
                     </div>
-                    <div className='sub-intro-wrapper left-gradient'>
+                    <div className='sub-intro-wrapper'>
                         <p className='sub-intro'>
                             The magic lies in building websites and web applications, creating
                             dynamic and responsive <span className='accent-m-b'>web solutions</span>

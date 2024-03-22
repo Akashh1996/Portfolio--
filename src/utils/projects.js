@@ -7,14 +7,6 @@ const projects = [
         demo: 'https://codeflow-ce514.web.app/',
         tech: [
             {
-                name: 'Html',
-                isAccent: false,
-            },
-            {
-                name: 'Css',
-                isAccent: false,
-            },
-            {
                 name: 'JavaScript',
                 isAccent: false,
             },
@@ -59,14 +51,6 @@ const projects = [
                 isAccent: false,
             },
             {
-                name: 'Firebase',
-                isAccent: false,
-            },
-            {
-                name: 'Heroku',
-                isAccent: false,
-            },
-            {
                 name: 'Git',
                 isAccent: false,
             },
@@ -87,14 +71,6 @@ const projects = [
         description:
             'A full-stack web application, which is a look a like of Netflix where users can checkout the latest and trending movies, watch the trailers, checkout on casts of the movie, search for movies and add them to their favourite list to watch later. The users can login with google to save their favourite movies.                ',
         tech: [
-            {
-                name: 'Html',
-                isAccent: false,
-            },
-            {
-                name: 'Css',
-                isAccent: false,
-            },
             {
                 name: 'JavaScript',
                 isAccent: false,
@@ -133,10 +109,6 @@ const projects = [
             },
             {
                 name: 'Express',
-                isAccent: false,
-            },
-            {
-                name: 'Eslint',
                 isAccent: false,
             },
             {

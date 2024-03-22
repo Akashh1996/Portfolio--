@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 
 .content {
   margin-top: 45px;
@@ -152,7 +156,7 @@ section {
 .sub-intro-wrapper {
   display: flex;
   justify-content: flex-end;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .accent-m-b {
@@ -745,13 +749,6 @@ a.my-mail {
   margin-top: 50px;
 }
 
-.image-wrapper.left-gradient:after {
-  background: none;
-}
-.image-wrapper.left-gradient {
-  padding-left: 0;
-}
-
 .menu {
   position: unset;
 }
@@ -797,8 +794,7 @@ a.my-mail {
     top: -8px;
   }
 
-  .intro-wrapper.left-gradient::after,
-  .sub-intro-wrapper.left-gradient::after {
+  .hero-text.left-gradient::after {
     background: none;
     padding-left: 0;
   }
@@ -825,6 +821,13 @@ a.my-mail {
 
   .menu ul {
     display: flex;
+  }
+
+  .image-wrapper.left-gradient:after {
+    background: none;
+  }
+  .image-wrapper.left-gradient {
+    padding-left: 0;
   }
 }
 
