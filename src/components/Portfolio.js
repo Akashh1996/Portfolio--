@@ -142,7 +142,7 @@ const Portfolio = () => {
                 <div className='content'>
                         <h1 className='welcome welcome-text'>Hello world !</h1>
                 </div>
-                <div className='hero-text left-gradient'>
+                <div className='hero-text'>
                     <div className='intro-wrapper'>
                         <p className='intro'>
                             Hello there! I'm <span className='accent-m-b'>Akash Sapkota</span>, a

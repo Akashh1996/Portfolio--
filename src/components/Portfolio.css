@@ -132,12 +132,7 @@ section {
   font-size: 16.5px;
 }
 
-.hero-text p {
-  padding: 0px;
-  width: 100%;
-  color: rgb(209, 209, 209);
 
-}
 
 .menu, h2, h3 {
   color: rgb(209, 209, 209);
@@ -771,6 +766,49 @@ a.my-mail {
   position: unset;
 }
 
+.intro-wrapper p {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 80%;
+  color: rgb(209, 209, 209);
+
+}
+.sub-intro-wrapper p {
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 80%;
+  color: rgb(209, 209, 209);
+  margin-right: 7px;
+
+}
+
+.intro {
+  border-style: solid;
+  border-color: transparent;
+  background: linear-gradient(to right, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%), linear-gradient(to bottom, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%);
+  background-size: 88% 8px, 8px 100%;
+  background-position: left top, left top;
+  background-repeat: no-repeat;
+  border-top-left-radius: 22px;
+}
+.sub-intro {
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  background: linear-gradient(to left, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%), linear-gradient(to top, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%);
+  background-size: 90% 8px, 8px 100%;
+  background-position: right bottom, right bottom;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 24px;
+  text-align: end;
+}
+
+.content {
+  margin-top: 0;
+}
+
 @media screen and (min-width: 480px) {
 
   .hero-text p {
@@ -801,6 +839,7 @@ a.my-mail {
     background-repeat: no-repeat;
     border-bottom-right-radius: 24px;
     text-align: end;
+    
   }
 
   .sub-intro-wrapper {
