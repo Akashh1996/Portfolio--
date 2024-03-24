@@ -114,6 +114,7 @@ const Portfolio = () => {
                             height={49}
                             quality={100}
                             className='logo'
+                            priority={true}
                         />
                     </a>
                 </div>
@@ -141,6 +142,7 @@ const Portfolio = () => {
             <section className='hero-section'>
                 <div className='content'>
                         <h1 className='welcome welcome-text'>Hello world !</h1>
+                        <h1 className='akash-portfolio'>Akash Portfolio</h1>
                 </div>
                 <div className='hero-text'>
                     <div className='intro-wrapper'>
@@ -177,6 +179,7 @@ const Portfolio = () => {
                                 width={icon === 'linkedin.svg' ? 42 : 30}
                                 height={icon === 'linkedin.svg' ? 42 : 30}
                                 quality={100}
+                                priority={true}
                             />
                         </a>
                     ))}
@@ -215,7 +218,7 @@ const Portfolio = () => {
                                         <Image
                                             className='image'
                                             src='/github.svg'
-                                            alt='Github'
+                                            alt='Portfolio Github'
                                             width={30}
                                             height={30}
                                             quality={100}
@@ -231,7 +234,7 @@ const Portfolio = () => {
                                             <Image
                                                 className='image'
                                                 src='/external.svg'
-                                                alt='External'
+                                                alt='Portfolio External'
                                                 width={30}
                                                 height={30}
                                                 quality={100}
@@ -241,7 +244,7 @@ const Portfolio = () => {
                                         <Image
                                             className='image'
                                             src='/external.svg'
-                                            alt='External'
+                                            alt='Portfolio External'
                                             width={30}
                                             height={30}
                                             quality={100}

@@ -130,7 +130,7 @@ const projects = [
         gitHub: 'https://github.com/Akashh1996/Portfolio',
         demo: 'https://akashsapkota.netlify.app/',
         description:
-            "Discover my portfolio website, built with Next.js. Featuring elegant design and smooth navigation, it showcases my skills in JavaScript, React, and more. Optimized for SEO, it's easily found when searching for 'akash portfolio' or 'akash sapkota portfolio' or any other similar keywords.",
+            "This is my portfolio website, built with Next.js. Featuring elegant design and smooth navigation, it showcases my skills in JavaScript, React, and more. Optimized for SEO, it's easily found when searching for 'akash portfolio' or 'akash sapkota portfolio' or any other similar keywords.",
         tech: [
             {
                 name: 'Next.js',
