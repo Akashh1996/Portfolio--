@@ -396,13 +396,7 @@ div.left-gradient {
 }
 
 .image-wrapper {
-  justify-self: end;
-}
-
-@media screen and (max-width: 778px) {
-  .image-wrapper {
-    justify-self: start;
-  }
+  justify-self: center;
 }
 
 h2 {
@@ -508,11 +502,14 @@ h2 {
 }
 
 .project-card-icons .image {
-  opacity: .5;
+  opacity: .9;
 }
 
 .project-card-icons .external-link .image {
-  opacity: .7;
+  opacity: 1;
+  position: relative;
+  top: -2px;
+  filter: brightness(2);
 }
 
 .project-card-icons a:first-child {
@@ -771,7 +768,6 @@ a.my-mail {
   padding-left: 30px;
   padding-right: 30px;
   width: 80%;
-  color: rgb(209, 209, 209);
 
 }
 .sub-intro-wrapper p {
@@ -788,7 +784,7 @@ a.my-mail {
   border-style: solid;
   border-color: transparent;
   background: linear-gradient(to right, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%), linear-gradient(to bottom, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%);
-  background-size: 88% 8px, 8px 100%;
+  background-size: calc(100% - 26px) 8px, 8px 100%;
   background-position: left top, left top;
   background-repeat: no-repeat;
   border-top-left-radius: 22px;
@@ -798,7 +794,7 @@ a.my-mail {
   border-style: solid;
   border-color: transparent;
   background: linear-gradient(to left, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%), linear-gradient(to top, rgb(120, 106, 176) 0%, rgb(66, 166, 102) 100%);
-  background-size: 90% 8px, 8px 100%;
+  background-size: calc(100% - 20px) 8px, 8px 100%;
   background-position: right bottom, right bottom;
   background-repeat: no-repeat;
   border-bottom-right-radius: 24px;
@@ -819,6 +815,11 @@ a.my-mail {
   .content {
     margin-top: 45px;
   } 
+
+  .image-wrapper {
+    justify-self: end;
+  }
+  
 
   .intro {
     border-style: solid;
@@ -862,9 +863,6 @@ a.my-mail {
     padding-left: 0;
   }
 
-  .accent-m-b {
-    color: unset;
-  }
   .container:after {
     position: absolute;
     bottom: 0;

@@ -47,7 +47,7 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-                <div className='image-wrapper left-gradient'>
+                <div className='image-wrapper'>
                     <div className='container'>
                         <Image
                             className='image'

@@ -100,7 +100,7 @@ const Portfolio = () => {
 
     return (
         <div ref={topRef} className='wrapper'>
-            <header className={`header-container ${scrollDirection === 'up' ? 'scrolled' : ''}`}>
+            <header data-title='Akash Portfolio' className={`header-container ${scrollDirection === 'up' ? 'scrolled' : ''}`}>
                 <div className='logo-wrapper'>
                     <a
                         area-label='logo'
@@ -296,7 +296,7 @@ const Portfolio = () => {
             </footer>
             </section>
 
-            <div>
+            {/* <div>
             <nav className='menu'>
                     <ul>
                         {navItems.map((item, idx) => (
@@ -312,7 +312,7 @@ const Portfolio = () => {
                         ))}
                     </ul>
                 </nav>
-            </div>
+            </div> */}
         </div>
     );
 };
