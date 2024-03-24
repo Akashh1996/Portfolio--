@@ -133,6 +133,10 @@ const projects = [
             "Discover my portfolio website, built with Next.js. Featuring elegant design and smooth navigation, it showcases my skills in JavaScript, React, and more. Optimized for SEO, it's easily found when searching for 'akash portfolio' or 'akash sapkota portfolio' or any other similar keywords.",
         tech: [
             {
+                name: 'Next.js',
+                isAccent: true,
+            },
+            {
                 name: 'JavaScript',
                 isAccent: false,
             },
@@ -145,16 +149,9 @@ const projects = [
                 isAccent: false,
             },
             {
-                name: 'Next.js',
-                isAccent: true,
-            },
-            {
                 name: 'Google search console',
                 isAccent: true,
-            },            {
-                name: 'Nodemailer',
-                isAccent: true,
-            },
+            }, 
             {
                 name: 'Netlify',
                 isAccent: false,
