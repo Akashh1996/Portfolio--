@@ -5,7 +5,7 @@
     xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'
 >
     <url>
-        <loc>https://akashsapkota.netlify.app/</loc>
+        <loc>https://akashsapkota.netlify.com/index.html</loc>
         <lastmod>2024-03-21T17:49:32.177Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.00</priority>
