@@ -1,23 +1,43 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodeMailer from 'nodemailer';
 
-const resend = new Resend('re_AAbGAbsQ_2wgkbvaSRjewnnygD2wKG4xS');
+const transporter = nodeMailer.createTransport({
+    service: process.env.SERVICE,
+    host: process.env.HOST,
+    port: 465,
+    secure: true,
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASSWORD,
+    },
+});
 
 export async function POST(req) {
-  try {
-    const body = await req.json()
-    const { data } = await resend.emails.send({
-        from: body.email,
-        to: 'akashh.sapkota@gmail.com',
-        subject: 'testing',
-        html: `<h1>${body.message}</h1>`,
-      });
-      const lisnt = await resend.domains.list();
-      await resend.domains.verify('af7230d7-d6dc-4179-a633-8e09aeac331a');
+    const body = await req.json();
 
-      console.log(lisnt);
-      return NextResponse.json({ data }, { status: 200 });
-  } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
-  }
+    const { name, email, message } = body;
+
+    const mailOptions = {
+        from: process.env.EMAIL,
+        to: process.env.EMAIL,
+        subject: `Message from ${name}`,
+        html: `<p>Email: ${email}</p>\n\n${message.replace(/\n/g, '<br>')}`,
+        replyTo: email,
+    };
+
+    try {
+        await new Promise((resolve, reject) => {
+            transporter.sendMail(mailOptions, (err, info) => {
+                if (err) {
+                    console.error(err);
+                    reject(err);
+                } else {
+                    resolve(info);
+                }
+            });
+        });
+        return NextResponse.json({ message: 'Message sent successfully' }, { status: 200 });
+    } catch (error) {
+        return NextResponse.json({ error: error.message }, { status: 500 });
+    }
 }

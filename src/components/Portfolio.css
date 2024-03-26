@@ -525,13 +525,13 @@ h3 {
 }
 
 .show-more {
-  padding: 15px 20px;
+  padding: 17px 20px;
   cursor: pointer;
   background-color: rgb(148, 163, 184, .1);
 }
 
 .show-more {
-  padding: 15px 0px;
+  padding: 17px 0px;
   cursor: pointer;
   margin: auto;
   background-color: rgb(148, 163, 184, .1);
@@ -599,6 +599,7 @@ input {
   background: transparent;
   border-bottom: 1px solid rgba(127, 127, 127);
   border-radius: 0;
+  font-size: 16px;
 
 }
 
@@ -611,7 +612,6 @@ textarea {
   background: transparent;
   padding: 20px;
   width: calc(100% - 40px);
-  font-family: 'Montserrat';
   height: 40px;
   padding: 15px 0px 0px 40px;
   font-size: 18px;
@@ -620,12 +620,16 @@ textarea {
   line-height: 100%;
   font-size: 15px;
   font-weight: 600;
-  font-family: sans-serif;
   resize: none;
   background: rgba(127, 127, 127, 0.1);
   background: transparent;
   border-bottom: 1px solid rgba(127, 127, 127);
   border-radius: 0;
+  font-size: 16px;
+  font-family: inherit;
+  white-space: pre-wrap;
+
+
 }
 
 .form-wrapper input,
@@ -798,6 +802,23 @@ a.my-mail {
 
 .content {
   margin-top: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+.form-loading {
+      position: relative;
+    top: 8px;
+}
+
+.form-loading div {
+  margin: 1.5px 0.3rem;
 }
 
 @media screen and (min-width: 480px) {

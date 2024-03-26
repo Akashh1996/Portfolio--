@@ -6,27 +6,47 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [successMessage, setShowSuccessMessage] = useState(false);
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
-        console.log(name, value);
         if (name === 'name') setName(value);
         if (name === 'email') setEmail(value);
         if (name === 'message') setMessage(value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+        setLoading(true);
+
+        if (!name || !email || !message) {
+            setLoading(false);
+            return;
+        }
+
         e.preventDefault();
-        fetch('/mail', {
+        await fetch('/mail', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type'
             },
             body: JSON.stringify({ name, email, message }),
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log('Success:', data);
+                setTimeout(() => {
+                    setLoading(false);
+                    setEmail('');
+                    setName('');
+                    setMessage('');
+                }, 200);
+
+                setShowSuccessMessage(true);
+                setTimeout(() => {
+                    setShowSuccessMessage(false);
+                }, 2000);
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -139,7 +159,12 @@ const Contact = () => {
             </div>
             <div className={`button-wrapper submit-button`}>
                 <div className='show-more' onClick={handleSubmit}>
-                    Send
+                    { loading ? <div className='form-loading loading'>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> : successMessage ? 'Message sent, thanks!' : 'Send'}
+
                 </div>
             </div>
         </>
