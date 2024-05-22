@@ -1,6 +1,7 @@
 'user client';
 
 import { useState } from 'react';
+import { sendEmail } from '../app/actions';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -17,6 +18,7 @@ const Contact = () => {
     };
 
     const handleSubmit = async (e) => {
+        
         setLoading(true);
 
         if (!name || !email || !message) {
@@ -24,18 +26,18 @@ const Contact = () => {
             return;
         }
 
+        const body = {
+            name,
+            email,
+            message,
+        }
+
         e.preventDefault();
-        await fetch('/mail', {
-            method: 'POST',
-            headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': 'Content-Type'
-            },
-            body: JSON.stringify({ name, email, message }),
-        })
-            .then((response) => response.json())
+
+        await sendEmail(body)
+            .then((response) => console.log(response))
             .then((data) => {
+                console.log(data);
                 setTimeout(() => {
                     setLoading(false);
                     setEmail('');
@@ -158,14 +160,14 @@ const Contact = () => {
                 </div>
             </div>
             <div className={`button-wrapper submit-button`}>
-                <div className='show-more' onClick={handleSubmit}>
+                <form className='show-more' onClick={handleSubmit}>
                     { loading ? <div className='form-loading loading'>
                     <div></div>
                     <div></div>
                     <div></div>
                 </div> : successMessage ? 'Message sent, thanks!' : 'Send'}
 
-                </div>
+                </form>
             </div>
         </>
     );
